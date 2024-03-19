@@ -1,0 +1,24 @@
+ <div>
+        
+        <table>
+            <tbody>
+                <tr>
+                    <th>Name</th>
+                    <th>Img</th>
+                    <th>Price</th>
+                </tr>
+
+                {data.map((value,index)=>{
+                       return(
+                        <tr>
+                    <td><h1>{value.name}</h1></td>
+                    <td><img src={value.img} style={{height:"100px",width:"100px"}}/></td>
+                    <td>{value.price}</td>
+                    <td><button onClick={()=>{dispatch(removecart(value))}}>Remove</button></td>
+                </tr>
+                       )
+                })}
+            </tbody>
+        </table>
+
+    </div>
